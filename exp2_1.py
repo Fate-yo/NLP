@@ -117,7 +117,7 @@ def cut(text):
         elif state == 'E':
             yield text[begin: index + 1]
             follow = index + 1
-        elif state == 's':
+        elif state == 'S':
             yield char
             follow = index + 1
     if follow < len(text):

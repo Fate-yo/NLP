@@ -8,15 +8,19 @@ def word_extract():
     for line in open(path, 'r', encoding=' gbk', errors='ignore'):
         line = line.strip()
         content += line
-        corpus.append(content)
+    corpus.append(content)
         # 加载停用词
     stop_words = []
+
+
     path = 'exp2/data/stopword.txt'
+
     for line in open(path, encoding='utf8'):
         line = line.strip()
         stop_words.append(line)
     split_words = []
     word_list = jieba.cut(corpus[0])
+
     for word in word_list:
         if word not in stop_words:
             split_words.append(word)

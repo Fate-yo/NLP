@@ -57,7 +57,7 @@ def train():
             value[k] = (v + 1) / Count_dict[key]
         emit_prob[key] = value
     model = 'exp2/tmp/hmm_model.json'
-    f = open(model, 'a+')
+    f = open(model, 'w')
     f.write(json.dumps(trans_prob) + '\n' + json.dumps(emit_prob) + '\n' + json.dumps(init_prob))
     f.close()
 
@@ -124,7 +124,7 @@ def cut(text):
         yield text[follow:]
 
 
-text = "学校是学习的好地方!"
+text = "学校是学习的好地方！"
 start_time = datetime.datetime.now()
 train()
 end_time = datetime.datetime.now()

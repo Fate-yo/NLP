@@ -124,7 +124,8 @@ def cut(text):
         yield text[follow:]
 
 
-text = "学校是学习的好地方！"
+text = "深航客机攀枝花机场遇险：机腹轮胎均疑受损，跑道灯部分损坏"
+
 start_time = datetime.datetime.now()
 train()
 end_time = datetime.datetime.now()
